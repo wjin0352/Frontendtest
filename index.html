@@ -1,15 +1,19 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Portfolio Site</title>
+		<title>MY Creation!</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bt.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+		<script src="script/jquery.js"></script>
+			<!-- jQuery 
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+			-->
 	</head>
 
 	<body>
-
 		<header>
 			<nav>
 				<a href="">About Me</a>
@@ -18,32 +22,195 @@
 				<a href="">Contact</a>
 			</nav>
 
-			<h1><span>My Theme</span></h1>
-			<p class="kicker">Designer // Developer // Creator</p>
+			<h1><span>Front End Test</span></h1>
+			<p class="kicker">Turn // to // Tech</p>
 
 		</header>
 
 
+<!-- start 2nd section -->
+		<main>
 		<section class="box-white container-fluid">
 			<div class="wrapper padding-all">
 				<div class="container">
-					
+					<article>
+						<h2>This is an example of using article tag and code tag to show html tag syntax in a paragraph.</h2>
+						<p>The HTML &ltarticle&gt Element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable, e.g., in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content. Each &ltarticle& gtshould be identified, typically by including a heading (h1-h6 element) as a child of the &ltarticle&gt element.</p>
+					</article>
 
+					<p>More html tags and explanations.</p>
+					<aside>
+						<h4>&ltaside&gt tag example</h4>
+						The &ltaside&gt tag represents section of a page with content tangentially to the rest, which could be considered seperate from that content.  These sections are often represented as sidebars or inserts.  
+					</aside>
+
+					<p>
+						&ltbdi&gt or bi-directional element tags isolates a span of text that might be formatted in a different direction from other text outside of it, hence the name of the tag.  
+					</p>
+
+					<ul>
+						<li>User <bdi>hrefs</bdi>: 60 points</li>
+						<li>User <bdi>jdoe</bdi>: 80 points</li>
+						<li>User <bdi>إيان</bdi>: 90 points</li>
+					</ul><br>
+
+					<details>
+						<summary>More on &ltdetails&gt tags below</summary>
+						<p>
+							The html &ltdetails&gt tag is used as a disclosure widget from which the user can find additional information.
+						</p>
+					</details>
+
+					<p>
+						The html &ltdialog&gt element represents a dialog box or other interactive component.  &ltform&gt elements can be integrated within a dialog by specifying them with attribute method="dialog".
+						When a form like that is submitted the dialog is closed with a returnValue attribute set to the value of the submit button used.
+						"open" indicates an active dialog available for interaction.
+					</p><br>
+
+						<!-- <p><b>Note:</b> The dialog tag is supported only in chrome canary and safari 6.</p>
+
+						<table>
+							<tr>
+								<th>January <dialog open>this is an open dialog window</dialog></th>
+								<th>Febuary</th>
+								<td>31</td>
+								<td>28</td>
+							</tr>
+						</table><br> -->
+
+					<p>
+						the html &ltfigure&gt element represents a self contained content like an image, usually with a caption.  You can use it to mark up a photo or document.  It's position is independent of the mainflow, and if removed should not affect the flow of a document.
+					</p>
+
+					<!-- figure and mark elements -->
+					<figure>
+						<img src="./images/haha.jpg" alt="a picture" width="300" height="200" ><figcaption><mark>Fig1.</mark> this is a caption for the picture</figcaption>
+					</figure>
+
+					
+					<div style="background:yellow;border:1px solid #cccccc;padding: 10px;" contextmenu="mymenu">
+					<p>Right-click inside this box to see the context menu!
+
+					<menu type="context" id="mymenu">
+					  <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+					  <menu label="Share on...">
+					    <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+					    <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+					  </menu>
+					  <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+					</menu>
+
+					</div>
+
+					<p>This example currently only works in Firefox!</p>
+
+					<p>gauge example</p>
+					<meter value= "2" min="0" max="10">2 out of 10</meter><br>
+					<meter value ="0.6">60%</meter>
+
+					<p>Downloading progress:</p>
+					<progress value="77" max="100"></progress><br>
+
+					<ruby>
+					  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+					  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+					</ruby>
 						
 				</div>	
 			</div>
 		</section>
-
+<!-- end 2nd section -->
+<!-- 3rd section -->
 		<section class="box-grey container-fluid">
 			<div class=" wrapper padding-all">
 			<div class="container">
-				<div class="row">
 					
+					<p>Time on deck is <time>4:00</time></p>
+						<summary> This element can also be used to encode dates and times in a machine-readable way so that user agents can offer to add birthday reminders or scheduled events to the user's calendar, and search engines can produce smarter search results.</summary><br>
 					
-				</div>	
+					<!-- <video width="320" height="240" controls>
+					  <source src="forrest_gump.mp4" type="video/mp4">
+					  <source src="forrest_gump.ogg" type="video/ogg">
+					  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+					  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+					</video> -->
+
+					<h4>Use of &ltembed&gt element below </h4>
+					<embed src="./images/cat.gif">
+
+					<div>
+						<h4>SVG</h4>
+						<summary>SVG stands for Scalable Vector Graphics</summary>
+						<svg width="300" height="200">
+					  <polygon points="100,10 40,198 190,78 10,78 160,198"
+					   style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+					</div><br>
+
+				<form action="demo_form.asp">
+ 					email: <input type="email" id="email" required /><br>
+ 					<input name="Submit" type="submit" onclick="email(document.getElementById("email"),'enter an email!')" value="send" />
+
+ 				</form><br>
+
+ 				<!-- <h3>date tag</h3>
+ 				<input type="date" id="date" />
+ 				 <input type="button" onclick="email(document.getElementById('date'),'enter a date')" value="date"/>
+ -->
+ 					<form action="demo_form.asp">
+					  Select your favorite color:
+					  <input type="color" name="favcolor" value="#ff0000">
+					  <input type="submit" value="Send">
+					</form>
+
+					<form action="demo_form.asp" method="get">
+					  Points:
+					  <input type="range" name="points" min="0" max="10">
+					  <input type="submit" value="Send">
+					</form>
+
+					<form action="demo_form.asp">
+					  Enter your birthday (month and year):
+					  <input type="month" name="bdaymonth">
+					  <input type="submit" value="Send">
+					</form>
+
+					<form action="demo_form.asp">
+					  Select a week:
+					  <input type="week" name="year_week">
+					  <input type="submit" value="Send">
+					</form>
+
+					<form action="demo_form.asp">
+					  Select a time:
+					  <input type="time" name="usr_time">
+					  <input type="submit" value="Send">
+					</form><br>
+
+					<p>The datetime type allows the user to select a date and time with time zone</p>
+					<form action="demo_form.asp">
+					  Birthday (date and time):
+					  <input type="datetime" name="bdaytime">
+					  <input type="submit" value="Send">
+					</form>
+
+					<form action="demo_form.asp">
+					  Birthday (date and time):
+					  <input type="datetime-local" name="bdaytime">
+					  <input type="submit" value="Send">
+					</form>
+
+					<form action="demo_form.asp">
+					  E-mail:
+					  <input type="email" name="email">
+					  <input type="submit" value="Send">
+					</form>
+
+				
 			</div>
 		</section>
+<!-- end of 3rd section -->
 
+<!-- start of 4th section -->
 		<section id="contact" class="box-white">
 			<div class="wrapper padding-all">
 				
@@ -54,7 +221,7 @@
 
 				<!-- my form / contact form starts -->
 				<div class="data-form">
-					<form method="post" action="http://portfolio-wjin.rhcloud.com/">
+					<form method="post" action="#">
 						<div class="row">
 							
 							<div>
@@ -111,7 +278,7 @@
 
 					</form>
 				</div>
-				<!-- Contact form ends -->
+				<!-- Contact form/4th section ends -->
  				
  				<!-- script for submit button 
  				<script>
@@ -216,7 +383,7 @@
 
 
 		</section>
-
+		</main>
 		
 		<footer>
 				<div class="lockup">
@@ -237,10 +404,7 @@
 
 	
 
-		<!-- jQuery -->
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+	
  				<script>
  					function ExampleJS(){
  						var jFirst = document.getElementById("fname").value;
@@ -351,8 +515,8 @@
 							return true;
 							}		
 				</script>
-				
 
+				
 		
 	</body>
 </html>

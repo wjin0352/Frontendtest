@@ -60,17 +60,23 @@ header {
 
 .box-white {
 	background-color: white;
-	height: 800px;
+	height: 1400px;
 }
+
+	dialog {
+		
+
+	}
 
 	/* Contact form section */
 	#contact {
 		height: 600px;
 	}
 
+
 .box-grey {
 	background-color:#f3f3f2;
-	height: 800px;
+	height: 1400px;
 }
 
 .padding-all {
