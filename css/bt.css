@@ -1,5 +1,6 @@
 html {
 	font-family: 'Open Sans', sans-serif;
+
 }
 
 header {
@@ -42,6 +43,28 @@ header {
 		padding-top: 100px;
 	}
 
+	div #opac h2 {
+		background: rgba(200, 54, 54, 0.2);
+	}
+
+	article p {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap:40px;
+    -moz-column-gap:40px;
+    column-gap:40px;
+
+    -webkit-column-rule: 4px outset rgba(200, 54, 54, 0.2); /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px outset rgba(200, 54, 54, 0.2); /* Firefox */
+    column-rule: 4px outset rgba(200, 54, 54, 0.2);
+	}
+
+	div #box img {
+		height: 200px;
+		width: 200px;
+	}
+
 		span {
 			display: inline-block;
 			padding: 0.2em 0.2em;
@@ -63,10 +86,19 @@ header {
 	height: 1400px;
 }
 
-	dialog {
-		
+	.column {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3; /* internet explorer */
+    -webkit-column-gap:40px;
+    -moz-column-gap:40px;
+    column-gap:40px;
 
+    -webkit-column-rule: 4px outset rgba(200, 54, 54, 0.2); /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px outset rgba(200, 54, 54, 0.2); /* Firefox */
+    column-rule: 4px outset rgba(200, 54, 54, 0.2);
 	}
+
 
 	/* Contact form section */
 	#contact {
@@ -76,7 +108,7 @@ header {
 
 .box-grey {
 	background-color:#f3f3f2;
-	height: 1400px;
+	height: 1800px;
 }
 
 .padding-all {
@@ -87,6 +119,53 @@ header {
 	width: 1170px;
 	margin: 0 auto;
 }
+
+  .last {
+		background-color: #f3f3f2;  
+	}
+
+	.sample2	{
+			height: 700px;
+			width: 700px;
+			background: 
+	   url("../images/laugh.jpg") 500px 100px no-repeat, 
+	   url("../images/haha.jpg") 10px 10px no-repeat;
+/*	 	background:  url("../images/laugh.jpg") 10px 10px no-repeat;
+*//*	 	background-image:  url("../images/haha.jpg") 600px 10px no-repeat;
+*/    /*background-size: cover;
+    background-position: center right , right;
+    background-repeat: no-repeat;*/
+}
+
+	.flexbox {
+		height: 1600px;
+	}
+
+	.box {
+		color: white;
+		border:white;
+		
+		font-size: 100px;
+		text-align: center;
+		text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+	}
+
+	.box p {
+			font-size: 20px;
+			}
+
+	
+		.box1 {background: red;}
+		.box2 {background: white;}
+		.box3 {background: blue;}
+		.box4 {background: grey;}
+		.box5 {background: purple;}
+		.box6 {background: orange;}
+		.box7 {background: green;}
+		.box8 {background: black;}
+		.box9 {background: white;}
+		.box10 {background: violet;}
+		
 
 footer {
 	/*height: 200px;
