@@ -399,17 +399,21 @@
 		   </div>
 		</section>
 
+		<!-- sample flexbox stuff -->
 		<section class="flexbox"> 
-			<div class="box box1">1</div>
-			<div class="box box2">2</div>
-			<div class="box box3">3</div>
-			<div class="box box4">4</div>
-			<div class="box box5">5</div>
-			<div class="box box6">6</div>
-			<div class="box box7">7</div>
-			<div class="box box8">8</div>
-			<div class="box box9">9</div>
-			<div class="box box10">10</div>
+			<div class="box box1"><p>Flexbox is Ready
+			The web was originally conceived as a mechanism for exchanging scientific documents. Web technology has evolved a great deal since then, but we still rely on CSS properties that have their roots in digital publishing. Indeed, CSS layout and positioning are some of the most difficult concepts for web designers, regardless of experience. Designers rely on the use of CSS properties like float and clear, or CSS declarations like display: block; and display: inline; to control their designs. With display: flexbox; designers are now in control of the direction, alignment, and spacing of page elements.
+
+			</p></div>
+			<div class="box box2"><p>Flexbox is a remarkably intelligent solution to a long-standing convoluted problem. For the last few years, designers have been patiently waiting for browser support to catch up to the CSS Flexible Box Layout Module specification. Finally, the latest versions of all major browsers include flexbox support<p/></div>
+			<div class="box box3"><p>At first glance, it may not appear very special. However, if you look at the code, you’ll notice that this layout uses no position or float properties. It also doesn’t use any block or inline values for display.</p></div>
+			<div class="box box4"><p>The declaration display: flex; defines a “flex container” and its direct children automatically become “flex items.” A flex container has a main axis, which is the primary direction in which flex items are laid out. The cross axis is perpendicular to the main axis. Both the main axis and the cross axis have a set of properties that can control how flex items are placed in relation to one another.</p></div>
+			<div class="box box5"><p>You can also nest flex containers inside one another, which I’ve done in the example code, since the display property is not automatically inherited. Both the .header and .nav classes have the display: flex; declaration applied. This is similar to how rows and columns in a CSS framework like Foundation can be nested.</p></div>
+			<div class="box box6"><p>One thing to note is that the main axis is the primary direction, and not necessarily the horizontal direction. The direction of a flex container can be changed with the flex-direction property. At mobile sizes, the navigation in the example becomes a 1-column list rather than horizontal links. This is accomplished in the example with the flex-direction: column; declaration</p></div>
+			<div class="box box7"><p>Then, at larger sizes, the declaration flex-direction: row; is used to make the navigation horizontal again. The default value for flex-direction is row, so even if the flex-direction property wasn’t used at all, then the list elements would still appear horizontal.</p></div>
+			<div class="box box8"><p>The flex property is applied to flex items. It’s a shorthand property that combines the flex-grow, flex-shrink, and flex-basis properties into one declaration. The flex-grow and flex-shrink properties both take a unitless value that defines how much space each element should take up in proportion to one another. By default, flex-grow is 0 and flex-shrink is 1, meaning that all the elements will be in proportion to one another. The flex-basis property defines the size of elements before extra space is distributed and its default value is auto.</p></div>
+			<div class="box box9"><p>The latter two properties are optional, so if we simply apply the declaration flex: 1; to the .nav class, it changes the flex-grow value to 1. The other flex item in the same flex container is the h1 element with the class .logo, and since flex-grow is 0 by default, the .nav will always take up more space than the .logo.</p></div>
+			<div class="box box10"><p>If there’s space left over inside a flex container, either because the flex items have reached their maximum size or because they’re inflexible, then the justify-content property can define how the space should be used. In the example, the .header has the declaration justify-content: space-between; which means the first flex item will be at the start of the line, the last item will touch the end of the line, and anything between will be evenly distributed. On the nested .nav flex container, the declaration justify-content: space-around; is used to distribute the remaining space evenly around each navigation link</p></div>
 		</section>
 
 		
