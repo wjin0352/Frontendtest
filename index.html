@@ -12,6 +12,51 @@
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+
+		<!--<script>
+			$.ajax({
+				url: "page2.html",
+				data: "html",
+				type: "GET",
+				dataType: "html",
+				success: function(html){
+					$("<image>").html(html).appendTo("#mydiv");
+				}
+			})
+		</script>-->
+
+			<script>
+				function loadXMLDoc()
+				{
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  // console.log("good til here")
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.onreadystatechange=function()
+				  {
+				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				    {
+				    document.getElementById("mydiv").innerHTML=xmlhttp.responseText;
+
+				    }
+				  }
+				xmlhttp.open("GET","page2.html",true);
+				console.log("good til here");
+				xmlhttp.send();
+				}
+				</script>
+
+				<script>//changes a picture to another picture on click event using js
+					function change(){
+						document.getElementById('stuff').src="./images/laugh.jpg";
+					}
+				</script>
 		<!--<script>
 			$('#container').load('http://google.com');
 
@@ -277,7 +322,10 @@
 			</div>
 
 			<div id="container"></div>
-			<button type="button" onclick="loadXMLDoc("http://www.google.com/images/srpr/logo11w.png")">request data!</button>
+			<div class="demo">
+			<input type="submit" onclick="change()" value="change pic"><img id="stuff" src="./images/city.gif"></div>
+
+			<button type="button" onclick="loadXMLDoc()">request data!</button>
 			<div id="mydiv"><h1>mydiv</h1></div>
 
 		</section>
@@ -461,6 +509,7 @@
 		<!-- two bkground pics overlapping -->
 		<section class="last">
 			<div class="sample2"></div>
+
 			
 		<!-- end -->   
 		   
