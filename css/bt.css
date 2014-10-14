@@ -32,6 +32,20 @@ header {
 		text-transform: uppercase;
 	}
 
+		a:hover {
+				position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			  background-color:#AC9239;
+			  color:white;
+			  box-shadow: 2px 2px 1px black;
+				border-radius: 3px;
+				text-decoration: none;
+			}
+
+
+
 	 h1 {
 		text-align: center;
 		font-size: 73px;
@@ -48,6 +62,7 @@ header {
 	}
 
 	article p {
+		position: relative;
 		-webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
@@ -71,11 +86,42 @@ header {
 			border: white solid 10px;
 		}
 
+			/* front end title */
+			.title {
+				position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			}
+
+			.title:hover {
+				position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			  background-color:white;
+			  color:black;
+			  box-shadow: 2px 2px 1px black;
+			}
+			/* front end title */
+
+
 		.kicker {
+
 			text-align: center;
 			font-weight:;
 			color: white;
 		}
+
+		/*.kicker:hover {
+				position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			  background-color:white;
+			  color:black;
+			  box-shadow: 2px 2px 1px black;
+			} */
 
 		 a:hover {
 			color: black;
@@ -84,9 +130,12 @@ header {
 .box-white {
 	background-color: white;
 	height: 1400px;
+	position: relative;
+
 }
 
-	.column {
+	.column {	
+		position: relative;
 		-webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3; /* internet explorer */
@@ -109,14 +158,15 @@ header {
 .box-grey {
 	background-color:#f3f3f2;
 	height: 1800px;
+	position: relative;
 }
 
 .padding-all {
 	padding: 40px;
 }
 
- .wrapper {
-	width: 1170px;
+.wrapper {
+	position: relative;
 	margin: 0 auto;
 }
 
@@ -125,7 +175,7 @@ header {
 	}
 
 	.sample2	{
-			height: 700px;
+			height:1200px;
 			width: 700px;
 			background: 
 	   url("../images/laugh.jpg") 500px 100px no-repeat, 
@@ -136,9 +186,21 @@ header {
     background-position: center right , right;
     background-repeat: no-repeat;*/
 }
+
+	div button {
+		margin-bottom: 40px;
+		color: red;
+		background-color: blue
+	}
+
+	#mydiv {
+		
+	}
+
 	/* flex box sample css, to use this you need a container and items inside of it
 	you can then say display flex and assign a flex value to each of them */
 	.flexbox {
+
 		display: flex; /*turns display into flexible wrapper */
 		height: 1600px;
 		flex-direction: column;
@@ -146,8 +208,6 @@ header {
 		border: 1px solid black;
 		margin:0 auto;
 		flex-wrap: wrap;
-
-
 	}
 
 	.box {
@@ -183,19 +243,40 @@ header {
 		.box10 {background: violet;}
 		
 		.box {
-	    border-style: solid;
 	    border-width: 1px;
 	    display: block;
 	    
 	    -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
 	    transition:width 2s, height 2s, background-color 2s, transform 2s;
 		}
-		.box:hover {
-		    
-		    -webkit-transform:rotate(180deg);
-		    transform:rotate(180deg);
+
+		/*  using nth-child  even .box turned light blue on hover, while odd 
+		ones turned red on hover*/
+
+		.box:hover:nth-child(even) {
+				background-color: rgb(215, 248, 250);
+ 
+			  -webkit-transform:rotate360deg);
+		    transform:rotate(360deg);
 		}
-				
+
+		.box:hover:nth-child(odd) {
+				background-color: red;
+/*				background-image: 
+*/		   -webkit-transform:rotate360deg);
+		    transform:rotate(360deg);
+		}
+
+		 .flexbox h2:hover {
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			  background-color:#AC9239;
+			  color:white;
+			  box-shadow: 2px 2px 1px black;
+				border-radius: 3px;
+				text-decoration: none;
+		}
 
 footer {
 	/*height: 200px;

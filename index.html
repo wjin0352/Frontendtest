@@ -7,23 +7,84 @@
 		<link rel="stylesheet" href="css/bt.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 		<script src="script/jquery.js"></script>
-			<!-- jQuery 
+		
+			 <!--jQuery -->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-			-->
+
+		<script>
+			$('#container').load('http://google.com');
+
+			$.ajax({
+				url: 'http://news.bbc.co.uk',
+				type: 'GET',
+				success: function(res){
+					var headline = $(res.responseText).find('a.tsh').text();
+					alert(headline);
+				}
+			});
+		</script>
+
+		<!--  <script>
+			function loadXMLDoc(url){
+				var xmlhttp;
+				if (window.XMLHttpRequest){
+					xmlhttp = new XMLHttpRequest();
+				} else
+				{
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange=function(){
+					if (xmlhttp.readyState==4  && xmlhttp.status==200){
+						document.getElementById("mydiv").innerHTML=xmlhttp.getElementById("footer-container");
+					}
+				}
+				xmlhttp.open("GET","http://www.youtube.com",true);
+				xmlhttp.send();
+			}
+		</script>-->
+	
+		<!--<script type="text/javascript">
+			var externalurl = "www.turntotech.io"; 
+			var contentlocationindom = "div > #mydiv";
+
+			$(document).ready(loadcontent);
+			function loadcontent(){
+				var queryurl = "http://anyorigin.com/get?url=" + externalurl + "&callback=?";
+				$.getJSON(queryurl, function(data){
+					if (data && data != null && typeof data == "object" && data.contents && data.contents != null && typeof data.contents == "string")
+					{
+						data = data.contents.replace(/<script[^>]*>[sS]*?</script>/gi );
+						if (data.length > 0)
+						{
+							if (contentlocationindom && contentlocationindom != null && contentlocationindom != "null"){
+								$('#mydiv').html($(contentlocationindom, data));
+
+							}
+							else
+							{
+								$('#mydiv').html(data);
+							}
+						}
+					}
+				});
+			}
+
+		</script>-->
+		
 	</head>
 
 	<body>
 		<header>
 			<nav>
-				<a href="">About Me</a>
-				<a href="">Work</a>
-				<a href="">Clients</a>
-				<a href="">Contact</a>
+				<a href="#opac">About Me</a>
+				<a href="#work">Work</a>
+				<a href="#clients">Clients</a>
+				<a href="#contact">Contact</a>
 			</nav>
 
-			<h1><span>Front End Test</span></h1>
-			<p class="kicker">Turn // to // Tech</p>
+			<h1><span class="title">Front End Test</span></h1>
+			<p class="kicker">Turn // to // Tech</p>					
 
 		</header>
 
@@ -123,7 +184,7 @@
 <!-- 3rd section -->
 		<section class="box-grey container-fluid">
 			<div class=" wrapper padding-all">
-			<div class="container">
+			<div class="container" id="work">
 					
 					<p>Time on deck is <time>4:00</time></p>
 						<summary> This element can also be used to encode dates and times in a machine-readable way so that user agents can offer to add birthday reminders or scheduled events to the user's calendar, and search engines can produce smarter search results.</summary><br>
@@ -215,6 +276,10 @@
 </div>
 				
 			</div>
+
+			<div id="container"></div>
+			<div id="mydiv"><h1>mydiv!!!!</h1></div>
+
 		</section>
 <!-- end of 3rd section -->
 
@@ -223,7 +288,7 @@
 			<div class="wrapper padding-all">
 				
 				<div class="section-header">
-					<h2>CONTACT INFO</h2>
+					<h2 id="contacts">CONTACT INFO</h2>
 					<h3>Please enter your information below: </h3><br>
 				</div>
 
@@ -392,16 +457,19 @@
 
 		</section>
 		</main>
-
+		
+		<!-- two bkground pics overlapping -->
 		<section class="last">
-			<div class="sample2">
-		    
-		   </div>
+			<div class="sample2"></div>
+			
+		<!-- end -->   
+		   
 		</section>
 
 		<!-- sample flexbox stuff -->
-		<section class="flexbox"> 
-			<div class="box box1"><p>Flexbox is Ready
+		<section class="flexbox">
+		<h2>Using nth-child() feature of css the odd boxes turn red on mouse hover, and the even boxes turn light blue on hover.</h2> 
+			<div class="box box1" id="clients"><p>Flexbox is Ready
 			The web was originally conceived as a mechanism for exchanging scientific documents. Web technology has evolved a great deal since then, but we still rely on CSS properties that have their roots in digital publishing. Indeed, CSS layout and positioning are some of the most difficult concepts for web designers, regardless of experience. Designers rely on the use of CSS properties like float and clear, or CSS declarations like display: block; and display: inline; to control their designs. With display: flexbox; designers are now in control of the direction, alignment, and spacing of page elements.
 
 			</p></div>
@@ -421,10 +489,10 @@
 				<div class="lockup">
 						<div class="content-wrap">
 							<nav>
-								<a href="">About Me</a>
-								<a href="">Work</a>
-								<a href="">Clients</a>
-								<a href="">Contact</a>
+								<a href="#opac">About Me</a>
+								<a href="#work">Work</a>
+								<a href="#clients">Clients</a>
+								<a href="#contact">Contact</a>
 							</nav>
 
 							<p class="copyright">All content copyright 2014</p>
