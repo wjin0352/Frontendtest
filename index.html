@@ -12,7 +12,7 @@
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-		<script>
+		<!--<script>
 			$('#container').load('http://google.com');
 
 			$.ajax({
@@ -23,7 +23,35 @@
 					alert(headline);
 				}
 			});
+		</script>-->
+
+		<script>
+			function createCORSRequest(method, url){
+				var xhr = new XMLHttpRequest();
+				if("withCredentials" in xhr){
+					xhr.open(method, url, true);
+				} else if (typeof XDomainRequest != "undefined"){
+					xhr = new XDomainRequest();
+					xhr.open(method, url);
+				} else{
+					xhr = null;
+				}
+				return xhr;
+			}
+
+			var url = "http://www.google.com/images/srpr/logo11w.png"
+			var request = createCORSRequest("get", "url");
+				if(request){
+					request.onload = function(){
+						//doing something with request.responseText 
+						request.document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+						$('#mydiv').html(data)
+					};
+					request.send();
+				}
 		</script>
+
+
 
 		<!--  <script>
 			function loadXMLDoc(url){
