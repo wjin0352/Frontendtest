@@ -25,7 +25,7 @@
 			});
 		</script>-->
 
-		<script>
+		<!--<script>
 			function createCORSRequest(method, url){
 				var xhr = new XMLHttpRequest();
 				if("withCredentials" in xhr){
@@ -49,55 +49,26 @@
 					};
 					request.send();
 				}
-		</script>
+		</script>-->
 
 
 
-		<!--  <script>
+		<!--<script>
 			function loadXMLDoc(url){
 				var xmlhttp;
 				if (window.XMLHttpRequest){
 					xmlhttp = new XMLHttpRequest();
-				} else
-				{
+				} else {
 					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 				}
 				xmlhttp.onreadystatechange=function(){
 					if (xmlhttp.readyState==4  && xmlhttp.status==200){
-						document.getElementById("mydiv").innerHTML=xmlhttp.getElementById("footer-container");
+						document.getElementById("mydiv").innerHTML=xmlhttp.responseText;
 					}
 				}
-				xmlhttp.open("GET","http://www.youtube.com",true);
+				xmlhttp.open("GET","url",true);
 				xmlhttp.send();
 			}
-		</script>-->
-	
-		<!--<script type="text/javascript">
-			var externalurl = "www.turntotech.io"; 
-			var contentlocationindom = "div > #mydiv";
-
-			$(document).ready(loadcontent);
-			function loadcontent(){
-				var queryurl = "http://anyorigin.com/get?url=" + externalurl + "&callback=?";
-				$.getJSON(queryurl, function(data){
-					if (data && data != null && typeof data == "object" && data.contents && data.contents != null && typeof data.contents == "string")
-					{
-						data = data.contents.replace(/<script[^>]*>[sS]*?</script>/gi );
-						if (data.length > 0)
-						{
-							if (contentlocationindom && contentlocationindom != null && contentlocationindom != "null"){
-								$('#mydiv').html($(contentlocationindom, data));
-
-							}
-							else
-							{
-								$('#mydiv').html(data);
-							}
-						}
-					}
-				});
-			}
-
 		</script>-->
 		
 	</head>
@@ -306,7 +277,8 @@
 			</div>
 
 			<div id="container"></div>
-			<div id="mydiv"><h1>mydiv!!!!</h1></div>
+			<button type="button" onclick="loadXMLDoc("http://www.google.com/images/srpr/logo11w.png")">request data!</button>
+			<div id="mydiv"><h1>mydiv</h1></div>
 
 		</section>
 <!-- end of 3rd section -->
