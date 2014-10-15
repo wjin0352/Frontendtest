@@ -98,6 +98,18 @@
 				}
 				</script>
 
+				<!-- javascript namespaces two objects created with same named function -->
+				<script>
+					var app1 = {};
+						app1.function1 = function(){
+							 alert("hey i'm function1 from app1!");
+						};
+					var app2 ={};
+						app2.function1 = function(){
+							 alert("Hi i'm function1 from app2!");
+						};
+				</script>
+
 		<!--<script>
 			$('#container').load('http://google.com');
 
@@ -364,7 +376,7 @@
 
 			<div id="container"></div>
 			<div class="demo">
-			<input type="submit" onclick="change()" value="change pic"><img id="stuff" src="./images/city.gif"></div>
+			<input type="submit" onclick="change()" value="change pic"><img id="stuff" src="./images/sharkstears.jpg"></div>
 
 			<div id="firstbutdiv">
 				<button type="button" id="firstbutton" onclick="loadXMLDoc()">change my text!</button>
@@ -373,12 +385,17 @@
 			<!-- <div id="ajax"></div>
 			<button type="button">Release the hounds</button>
  -->
- 			<container>
 			<div id="ajax"><h2>AJAX will change this text!</h2></div>
 			<div id="secbutdiv">
 				<button type="button" value="AJAX BUTTON" onclick="changecontent()">Change Content</button>
 			</div>
-		</container>
+
+			<div id="name1"><h3>javascript namespace function1</h3></div>
+			<button type="button" value ="button1" onClick="app1.function1()" id="but1"></button><br>	
+			<div id="name2"><h3>javascript namespace function2</h3></div>
+			<button type="button" onClick="app2.function1()" id="but2" value="button2"></button>
+
+
 		</section>
 <!-- end of 3rd section -->
 
@@ -403,6 +420,11 @@
 									<input type="text" name="name" id="name" placeholder="Enter your name" required>
 								</div>
 							</div>
+
+								
+							<label for="number"> Enter Quantity (between 1 and 5): </label>
+								<input type="number" name="quantity" min="1" max="5">
+							  <input type="submit" value="Send">
 
 							<div>
 								<label for="email">Email</label>
@@ -450,6 +472,11 @@
 
 					</form>
 				</div>
+				 <form action="demo_form.asp"><br>
+				  Search Google:
+				  <input type="search" name="googlesearch">
+				  <input type="submit" value="Send">
+				</form>
 				<!-- Contact form/4th section ends -->
  				
  				<!-- script for submit button 
@@ -555,6 +582,13 @@
 		<section class="last">
 			<div class="sample2"></div>
 
+			<video width="600" controls>
+			  <source src="mov_bbb.mp4" type="video/mp4">
+			  <source src="mov_bbb.ogg" type="video/ogg">
+			  Your browser does not support HTML5 video.
+			</video>
+
+	
 			
 		<!-- end -->   
 		   

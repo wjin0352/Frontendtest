@@ -166,13 +166,18 @@ header {
 }
 
 .wrapper {
-	position: relative;
 	margin: 0 auto;
+
+}
+
+.wrapper .padding-all {
+	position: relative;
+	background-color: orange;
 }
 
   .last {
+  	margin-top:80px;
 		background-color: #f3f3f2;
-		  position: relative;
 				transition-property: background-color, color;
 			  transition-duration: 1s;
 			  transition-timing-function: ease-out;
@@ -205,6 +210,18 @@ header {
     background-repeat: no-repeat;*/
 }
 	
+	button#but1 {
+		width:70px;
+		height:25px;
+		color: white;
+	}
+
+	button#but2{
+		width:70px;
+		height:25px;
+		color: white;
+	}
+
 	#firstbutdiv {
 		margin-top: 100px;
 		margin-bottom: -30px;
@@ -220,7 +237,9 @@ header {
 		margin-top: 20px;
 	}
 
-	#mydiv {
+	  
+
+	button #mydiv {
 		height: 200px;
 		background-color:rgba(164, 230, 16, 1);
 
