@@ -157,7 +157,7 @@ header {
 
 .box-grey {
 	background-color:#f3f3f2;
-	height: 2700px;
+	height: 3200px;
 	position: relative;
 }
 
@@ -171,8 +171,26 @@ header {
 }
 
   .last {
-		background-color: #f3f3f2;  
-	}
+		background-color: #f3f3f2;
+		  position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			}
+	
+	.last:hover {
+				position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			  background-color:rgb(194, 177, 40);
+			  background-opacity: 0.5;
+			  color:black;
+			  box-shadow: 2px 2px 1px black;	
+  }
+
+
+	
 
 	.sample2	{
 			height:1200px;
@@ -186,6 +204,11 @@ header {
     background-position: center right , right;
     background-repeat: no-repeat;*/
 }
+	
+	#firstbutdiv {
+		margin-top: 100px;
+		margin-bottom: -30px;
+	}
 
 	div button {
 		margin-bottom: 40px;
@@ -193,8 +216,19 @@ header {
 		background-color: blue
 	}
 
+	#button{
+		margin-top: 20px;
+	}
+
 	#mydiv {
-		
+		height: 200px;
+		background-color:rgba(164, 230, 16, 1);
+
+	}
+
+	#ajax {
+		height: 200px;
+		background-color: rgba(106, 198, 21, 1);
 	}
 
 	/* flex box sample css, to use this you need a container and items inside of it
@@ -209,6 +243,25 @@ header {
 		margin:0 auto;
 		flex-wrap: wrap;
 	}
+
+		.flexbox {
+  	position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			}
+	
+	.flexbox:hover {
+				position: relative;
+				transition-property: background-color, color;
+			  transition-duration: 1s;
+			  transition-timing-function: ease-out;
+			  background-color:green;
+			  background-opacity: 0.5;
+			  color:black;
+			  box-shadow: 2px 2px 1px black;	
+  }
+
 
 	.box {
 		
@@ -306,4 +359,6 @@ footer {
 					font-size: 12px;
 					color: rgba(0,0,0,1);
 				}
+
+
 

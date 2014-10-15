@@ -40,14 +40,14 @@
 				  }
 				xmlhttp.onreadystatechange=function()
 				  {
-				  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				  if (xmlhttp.readyState==4)
 				    {
+				    alert('This will not work on chrome, please use firefox!');
 				    document.getElementById("mydiv").innerHTML=xmlhttp.responseText;
 
 				    }
 				  }
-				xmlhttp.open("GET","page2.html",true);
-				console.log("good til here");
+				xmlhttp.open("GET","./untitled.txt",true);
 				xmlhttp.send();
 				}
 				</script>
@@ -57,6 +57,47 @@
 						document.getElementById('stuff').src="./images/laugh.jpg";
 					}
 				</script>
+
+				<!-- 
+				<script type="text/javascript">
+				//var url =[ "./images/laugh.jpg", "./images/haha.jpg","./images/cat.gif"]; 
+					$(document).ready(function(){
+						$("button").click(function(){
+							
+							$("#ajax").html('<img src="./images/laugh.jpg"></img>');
+						});
+					});
+				</script>
+ -->
+
+
+				<script>
+				function changecontent()
+				{
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.onreadystatechange=function()
+				  {
+				  if (xmlhttp.readyState==4)
+				    {
+				    alert('This will not work on chrome, please use firefox!');
+				    document.getElementById("ajax").innerHTML=xmlhttp.responseText;
+				    }
+				  }
+				  // url: the location of the file on the server
+				xmlhttp.open("GET","./file.txt",true);
+				// $('#myDiv').append('<img src="./images/laugh.jpg">');
+				 xmlhttp.send();
+				}
+				</script>
+
 		<!--<script>
 			$('#container').load('http://google.com');
 
@@ -107,7 +148,7 @@
 					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 				}
 				xmlhttp.onreadystatechange=function(){
-					if (xmlhttp.readyState==4  && xmlhttp.status==200){
+					if (xmlhttp.readyState==4){
 						document.getElementById("mydiv").innerHTML=xmlhttp.responseText;
 					}
 				}
@@ -325,9 +366,19 @@
 			<div class="demo">
 			<input type="submit" onclick="change()" value="change pic"><img id="stuff" src="./images/city.gif"></div>
 
-			<button type="button" onclick="loadXMLDoc()">request data!</button>
-			<div id="mydiv"><h1>mydiv</h1></div>
-
+			<div id="firstbutdiv">
+				<button type="button" id="firstbutton" onclick="loadXMLDoc()">change my text!</button>
+			</div>
+			<div id="mydiv"><h1>Change this text!</h1></div>
+			<!-- <div id="ajax"></div>
+			<button type="button">Release the hounds</button>
+ -->
+ 			<container>
+			<div id="ajax"><h2>AJAX will change this text!</h2></div>
+			<div id="secbutdiv">
+				<button type="button" value="AJAX BUTTON" onclick="changecontent()">Change Content</button>
+			</div>
+		</container>
 		</section>
 <!-- end of 3rd section -->
 
@@ -423,12 +474,6 @@
  					});
  				});
  				</script>-->
-
-
-
-
-
-						
 
 			<!--
  			 <form name="myform" onsubmit="ExampleJS()">
@@ -664,8 +709,6 @@
 							return true;
 							}		
 				</script>
-
-				
 		
 	</body>
 </html>
