@@ -10,10 +10,17 @@
 			 <!--jQuery -->
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		
+
+
 		<script>
+			count = 1; //runs once!
+			// alert("beginning "+count);
 
 			function yut()
 				{
+				
+				alert(count);
 				var xmlhttp;
 				if (window.XMLHttpRequest)
 				  {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -26,32 +33,29 @@
 				  }
 				xmlhttp.onreadystatechange=function()
 				  {
-				  if (xmlhttp.readyState==4){
-				    // {
-				    // 
-				    // document.getElementById("show").innerHTML=xmlhttp.responseText;
-				    // }
-				    console.log('all is well');
-				 	  }
+				  if (xmlhttp.readyState==4)
+				    {
+				    
+				    document.getElementById("show").innerHTML=xmlhttp.responseText;
+				    }
+				    
 				  }
 				  // url: the location of the file on the server
-				  
-					  if (x=true){
-					  	
-					  	 var x = false;
-					  	 document.getElementById("show").innerHTML=xmlhttp.responseText;
+				  	// alert(x.type);
+				  	if((count%2)==0){
+				  		count++;
+							alert("hey i'm the first function runnin, count is: "+count);
 							xmlhttp.open("GET","./file.txt",true);
-							// $('#myDiv').append('<img src="./images/laugh.jpg">');
 							xmlhttp.send();
+							
 						} else {
-
-							var x = true;
-							document.getElementById("other").innerHTML=xmlhttp.responseText;
+							count++;
+							alert("hey i'm the second function runnin, count is: "+count);
 							xmlhttp.open("GET","./untitled.txt",true);
-							// $('#myDiv').append('<img src="./images/laugh.jpg">');
 							xmlhttp.send();
+							
 						}
-					}
+					};
 				
 		</script>
 
