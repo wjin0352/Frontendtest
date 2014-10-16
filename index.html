@@ -582,11 +582,32 @@
 		<section class="last">
 			<div class="sample2"></div>
 
-			<video width="600" controls>
-			  <source src="mov_bbb.mp4" type="video/mp4">
-			  <source src="mov_bbb.ogg" type="video/ogg">
-			  Your browser does not support HTML5 video.
-			</video>
+			<section id="three"><h2><p>This button on every click will give you a different text file, being loaded with ajax locally.</p></h2><label for="picbut">Click for news</label>
+			<button type="button" name="picbut" value="click" onclick="yut()"></button>
+			<div id="show"></div>
+			</section>
+
+
+			<label>Music player</label>
+			<section>
+			<audio controls>
+			  <source src="horse.ogg" type="audio/ogg">
+			  <source src="./pac.mp3" type="audio/mpeg">
+			</audio></section><br>
+
+			<label>Media player: This video works on Chrome</label>	
+			<section>
+				<video width="600" controls>
+				  <source src="./EastboundDown.mp4" type="video/mp4">
+				  <source src="./EastboundDown.mp4" type="video/mp4">
+	  			Your browser does not support HTML5 video.
+				</video>
+			</section>
+			<!-- <video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video> -->
 
 	
 			
@@ -743,6 +764,53 @@
 							return true;
 							}		
 				</script>
+
+
+				<!-- Javascript Question 2 -->
+				<script>
+			count = 1; //runs once!
+			// alert("beginning "+count);
+
+			function yut()
+				{
+				
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				  {// code for IE7+, Firefox, Chrome, Opera, Safari
+				  xmlhttp=new XMLHttpRequest();
+				  alert('This will not work on chrome, please use firefox!');
+				  }
+				else
+				  {// code for IE6, IE5
+				  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				  }
+				xmlhttp.onreadystatechange=function()
+				  {
+				  if (xmlhttp.readyState==4)
+				    {
+				    
+				    document.getElementById("show").innerHTML=xmlhttp.responseText;
+				    }
+				    
+				  }
+				  // url: the location of the file on the server
+				  	// alert(x.type);
+				  	if((count%2)==0){
+				  		count++;
+							alert("count is: "+count);
+							xmlhttp.open("GET","./file.txt",true);
+							xmlhttp.send();
+							
+						} else {
+							count++;
+							alert("count is: "+count);
+							xmlhttp.open("GET","./untitled.txt",true);
+							xmlhttp.send();
+							
+						}
+					};
+				
+		</script>
 		
 	</body>
 </html>

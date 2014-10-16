@@ -157,12 +157,12 @@ header {
 
 .box-grey {
 	background-color:#f3f3f2;
-	height: 2800px;
+	height: 3000px;
 	position: relative;
 }
 
 .padding-all {
-	padding: 40px;
+	/*padding: 40px;*/
 }
 
 .wrapper {
@@ -170,10 +170,20 @@ header {
 
 }
 
-div.container{
-	margin-bottom: 50px;
+section #three {
+	height: 600px;
+	padding: 100, 200, 50, 50;
+	position: center;
 }
+	#three button {
+		
+		height: 50px;
+		width: 70px;
+	}
 
+.last>label {
+	font-size: 25px;
+}
 /*.wrapper .padding-all {
 	position: relative;
 	background-color: orange;
